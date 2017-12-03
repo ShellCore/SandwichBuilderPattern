@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Sandwich Builder Pattern</string>
+    <string name="baguette">Baguette</string>
+    <string name="bagel">Rosquilla</string>
+    <string name="bread_types">Tipos de pan</string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="ham">Jamón</string>
+    <string name="cheese">Queso</string>
+    <string name="extras">Extras</string>
+    <string name="salt">Sal</string>
+    <string name="cancel">Cancelar</string>
+    <string name="accept">Aceptar</string>
+    <string name="order">Orden</string>
 </resources>
