@@ -1,5 +1,7 @@
 package com.shellcore.android.sandwichbuilderpattern;
 
+import com.shellcore.android.sandwichbuilderpattern.ingredient.Ingredient;
+
 /**
  * Created by Shell on 02/12/2017.
  */

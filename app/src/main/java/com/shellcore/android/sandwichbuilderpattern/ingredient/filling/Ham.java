@@ -1,18 +1,18 @@
-package com.shellcore.android.sandwichbuilderpattern;
+package com.shellcore.android.sandwichbuilderpattern.ingredient.filling;
 
 /**
  * Created by Shell on 02/12/2017.
  */
 
-public class Cheese extends Filling {
+public class Ham extends Filling {
 
     @Override
     public String getDescription() {
-        return "Queso";
+        return "Jamón";
     }
 
     @Override
     public int getKcal() {
-        return 78;
+        return 64;
     }
 }

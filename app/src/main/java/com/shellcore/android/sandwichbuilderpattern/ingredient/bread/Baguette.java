@@ -1,4 +1,4 @@
-package com.shellcore.android.sandwichbuilderpattern;
+package com.shellcore.android.sandwichbuilderpattern.ingredient.bread;
 
 /**
  * Created by Shell on 02/12/2017.

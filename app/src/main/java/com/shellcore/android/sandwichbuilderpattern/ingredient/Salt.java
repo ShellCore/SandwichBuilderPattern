@@ -1,4 +1,6 @@
-package com.shellcore.android.sandwichbuilderpattern;
+package com.shellcore.android.sandwichbuilderpattern.ingredient;
+
+import com.shellcore.android.sandwichbuilderpattern.ingredient.Ingredient;
 
 /**
  * Created by Shell on 02/12/2017.

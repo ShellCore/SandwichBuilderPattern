@@ -7,6 +7,14 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.shellcore.android.sandwichbuilderpattern.ingredient.Salt;
+import com.shellcore.android.sandwichbuilderpattern.ingredient.bread.Bagel;
+import com.shellcore.android.sandwichbuilderpattern.ingredient.bread.Baguette;
+import com.shellcore.android.sandwichbuilderpattern.ingredient.bread.Bread;
+import com.shellcore.android.sandwichbuilderpattern.ingredient.bread.decorator.Toasted;
+import com.shellcore.android.sandwichbuilderpattern.ingredient.filling.Cheese;
+import com.shellcore.android.sandwichbuilderpattern.ingredient.filling.Ham;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -30,12 +38,16 @@ public class MainActivity extends AppCompatActivity {
     TextView txtAccept;
     @BindView(R.id.txt_order)
     TextView txtOrder;
+    @BindView(R.id.sw_toasted)
+    Switch swToasted;
 
     // Servicios
     public SandwichBuilder builder;
 
     // Variables
     public Sandwich sandwich;
+    public Bread bread;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,10 +84,19 @@ public class MainActivity extends AppCompatActivity {
             sandwich = builder.build(sandwich, new Salt());
         }
 
+        String toast = "";
+        int extraKcal = 0;
+        if (swToasted.isChecked()) {
+            Toasted t = new Toasted(bread);
+            toast = t.getDecoration();
+            extraKcal = t.getKcal();
+        }
+
         StringBuilder sb = new StringBuilder();
         sb.append(sandwich.getDescription())
+                .append(toast)
                 .append("\n")
-                .append(sandwich.getKcal())
+                .append(sandwich.getKcal() + extraKcal)
                 .append(" kcal");
         txtOrder.setText(sb.toString());
     }
